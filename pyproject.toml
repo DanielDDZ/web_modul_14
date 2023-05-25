@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "web_modul_14"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Zubov <https://github.com/DanielDDZ>"]
+readme = "README.md"
+packages = [{include = "web_modul_14"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.95.1"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+sqlalchemy = "^2.0.3"
+psycopg2-binary = "^2.9.5"
+alembic = "^1.9.4"
+pydantic = "^1.10.5"
+libgravatar = "^1.0.4"
+passlib = "^1.7.4"
+python-multipart = "^0.0.6"
+bcrypt = "^4.0.1"
+python-jose = "^3.3.0"
+fastapi-mail = "^1.2.6"
+fastapi-limiter = "^0.1.5"
+python-dotenv = "^1.0.0"
+cloudinary = "^1.32.0"
+redis = "^4.5.3"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.0.1"
+pytest = "^7.3.1"
+
+
+[tool.poetry.group.test.dependencies]
+httpx = "^0.24.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
